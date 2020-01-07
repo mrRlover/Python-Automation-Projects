@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 import os
 import urllib 
 
-
 archive_url = 'https://zedpastpapers.com/downloads/grade12/index.html'
 
 def get_links():
@@ -98,9 +97,9 @@ final_file_links = get_file_links()
 
 folders = [name + 's' for name in options]
 
-for folder in folders:
-    if not os.path.isdir(os.path.join(filepath, folder)):
-        os.mkdir(os.path.join(filepath, folder))
+# for folder in folders:
+#     if not os.path.isdir(os.path.join(filepath, folder)):
+#         os.mkdir(os.path.join(filepath, folder))
 
 final_file_links = [w.replace(' ', '') for w in final_file_links]
 
